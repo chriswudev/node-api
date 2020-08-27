@@ -1,0 +1,34 @@
+{
+  "name": "node-api",
+  "version": "1.0.0",
+  "description": "Node API project (Node.js, Express.js, JWT, Postgres)",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd ./src && cross-env NODE_ENV=production node index.js",
+    "start-dev": "cd ./src && cross-env NODE_ENV=development node index.js",
+    "install-start": "npm run setup && npm start",
+    "install-start-dev": "npm run setup && npm run start-dev",
+    "setup": "npm install",
+    "heroku-postbuild": "cp ./src/env.example.js ./src/env.js"
+  },
+  "author": "Chris Wu",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "express-session": "^1.16.2",
+    "generate-password": "^1.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.13",
+    "morgan": "^1.9.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "password-hash": "latest",
+    "pg": "^6.4.1",
+    "sequelize": "^6.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^3.1.4"
+  }
+}
